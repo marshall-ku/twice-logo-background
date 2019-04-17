@@ -8,7 +8,8 @@ https://marshall-ku.github.io/twice-logo-background/
 ![thumb](1.png)
 
 Click anywhere to toggle full screen, and capture the page.
-And, you just can use it as your background.
+
+Then, you just can use it as your background.
 
 ![thumb](2.png)
 
