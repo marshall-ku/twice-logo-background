@@ -19,6 +19,8 @@ If you are using desktop, press right click on the mouse to show this layer.
 If you are using mobile devices, long press the page to show this layer.
 
 
+
+```
 Color - edit color of the logo (rgb or rgba)
 
 Width - edit width of the logo
@@ -30,13 +32,14 @@ Remove Hash - Reset all the settings
 Reset - remove the value of all "input"
 
 Done - the logo will be updated with the value that you entered
+```
 
 
 ![thumb](3.png)
 
 Done!
 
-
+***
 #### preview
 
 ![thumb](4.png)
