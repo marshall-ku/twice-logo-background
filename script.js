@@ -1,10 +1,19 @@
 const twice = document.getElementById("twice");
-let width = Number(location.href.substring(location.href.lastIndexOf("width=") + 6, location.href.length));
 
 function fs() {
   document.fullscreenElement ?
     document.exitFullscreen && document.exitFullscreen() :
     document.documentElement.requestFullscreen()
+}
+
+function c() {
+  -1 !== location.href.indexOf("color=") && twice.setAttribute("style", `fill:${location.href.substring(location.href.lastIndexOf("rgb"),location.href.lastIndexOf(")")+1)}`)
+}
+
+function w() {
+  let width = Number(location.href.substring(location.href.lastIndexOf("width=") + 6, location.href.length));
+  isNaN(width) && (width = +location.href.substring(location.href.lastIndexOf("width=") + 6, location.href.lastIndexOf("color"))),
+    twice.style.width = width;
 }
 
 document.addEventListener("click", function (a) {
@@ -54,9 +63,5 @@ document.addEventListener("click", function (a) {
     if (colorval === "" && widthval !== "") {
       location.hash = `width=${widthval}`
     }
-    location.reload()
-  }),
-
-  isNaN(width) && (width = +location.href.substring(location.href.lastIndexOf("width=") + 6, location.href.lastIndexOf("color"))),
-  -1 !== location.href.indexOf("color=") && twice.setAttribute("style", `fill:${location.href.substring(location.href.lastIndexOf("rgb"),location.href.lastIndexOf(")")+1)}`),
-  twice.style.width = width;
+    c(), w();
+  }), c(), w();
