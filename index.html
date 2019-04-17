@@ -8,6 +8,92 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./style.css">
+    <style>
+        *{box-sizing:border-box}
+
+        html,
+        body {
+            width: 100%;
+            height: 100%
+        }
+
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right bottom, #ff5fa2, #fcc89b);
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .toggleLayer {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            padding:3vh;
+            padding-bottom:2vh;
+            background:rgba(255,255,255,.5);
+            border-radius:15px;
+            transform:translate(-50%, -50%);
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s ease-out
+        }
+
+        body.toggled .toggleLayer {
+            visibility: visible;
+            opacity: 1
+        }
+
+        .toggleLayer input {
+            width:100%;
+            height:2rem;
+            padding:0 5px;
+            margin-bottom:2vh;
+            background:rgba(255,255,255,.75);
+            outline:none;
+            border:none
+        }
+
+        #twice {
+            width: 75px;
+            fill: rgba(255, 255, 255, .5)
+        }
+
+        .gradient .btn {
+            display:none
+        }
+
+        .gradient .btn.grds {
+            display:inline-block
+        }
+        
+        .gradient.reveal .btn {
+            display:inline-block
+        }
+
+        .btn-wrapper {
+            text-align:center
+        }
+
+        .btn {
+            display: inline-block;
+            text-align: center;
+            border-radius: 4px;
+            padding: 5px 7.5px;
+            margin-bottom:1vh;
+            box-shadow: #ffadc5 0 0 0 2px inset;
+            transition: .2s cubic-bezier(.39, .5, .15, 1.36)
+        }
+
+        .btn:hover {
+            color: #000;
+            box-shadow: #ffadc5 0 0 0 40px inset
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +123,6 @@
             <span class="btn done">Done</span>
         </div>
     </div>
-    <script src="./script.js></script>
 </body>
 
 </html>
