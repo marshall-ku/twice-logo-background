@@ -13,7 +13,7 @@ function c() {
 function w() {
   let width = Number(location.href.substring(location.href.lastIndexOf("width=") + 6, location.href.length));
   isNaN(width) && (width = +location.href.substring(location.href.lastIndexOf("width=") + 6, location.href.lastIndexOf("color"))),
-    twice.style.width = width;
+  twice.style.width = width;
 }
 
 document.addEventListener("click", function (a) {
