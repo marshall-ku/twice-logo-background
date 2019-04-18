@@ -47,8 +47,9 @@ document.addEventListener("click", function (a) {
   }),
 
   document.querySelector(".btn.done").addEventListener("click", function () {
-    const colorval = document.querySelector(".color").value.trim(),
-      widthval = document.querySelector(".width").value,
+    const space = / /g,
+          colorval = document.querySelector(".color").value.replace(space, ""),
+          widthval = document.querySelector(".width").value,
       comma = colorval.split(",").length;
     if (colorval !== "") {
       if (comma === 3) {
