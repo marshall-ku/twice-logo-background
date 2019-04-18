@@ -1,9 +1,11 @@
 const twice = document.getElementById("twice");
 
 function fs() {
-  document.fullscreenElement ?
-    document.exitFullscreen && document.exitFullscreen() :
-    document.documentElement.requestFullscreen()
+  var a = window.document,
+    b = a.documentElement,
+    c = b.requestFullscreen || b.mozRequestFullScreen || b.webkitRequestFullScreen || b.msRequestFullscreen,
+    d = a.exitFullscreen || a.mozCancelFullScreen || a.webkitExitFullscreen || a.msExitFullscreen;
+  a.fullscreenElement || a.mozFullScreenElement || a.webkitFullscreenElement || a.msFullscreenElement ? d.call(a) : c.call(b)
 }
 
 function c() {
